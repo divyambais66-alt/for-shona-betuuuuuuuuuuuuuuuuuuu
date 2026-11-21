@@ -1,0 +1,1862 @@
+<link rel="stylesheet" href="https://cdnjs.c<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy Birthday, My Shonaaa Betuuuuuuu ❤️</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts for Luxury Scrapbook Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->loudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        :root {
+            --rose-primary: #e11d48;
+            --rose-soft: #ffe4e6;
+            --cream-paper: #fffaf5;
+            --gold-accent: #d97706;
+            --deep-burgundy: #881337;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at top left, #ffe4e6 0%, #fecdd3 35%, #fda4af 70%, #f43f5e 100%);
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+            color: #4c0519;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .font-script {
+            font-family: 'Great Vibes', cursive;
+        }
+
+        .font-serif-luxury {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Scrapbook Paper Texture */
+        .scrapbook-page {
+            background-color: var(--cream-paper);
+            background-image: 
+                radial-gradient(#f43f5e12 1px, transparent 0),
+                radial-gradient(#d977060d 1px, var(--cream-paper) 0);
+            background-size: 24px 24px;
+            background-position: 0 0, 12px 12px;
+            box-shadow: 
+                0 25px 50px -12px rgba(136, 19, 55, 0.35),
+                inset 0 0 40px rgba(251, 207, 232, 0.45),
+                0 0 0 8px rgba(255, 255, 255, 0.65);
+            border-radius: 24px;
+            position: relative;
+            transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.45s ease;
+        }
+
+        /* Spine effect on desktop */
+        @media (min-width: 768px) {
+            .scrapbook-page::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 16px;
+                bottom: 16px;
+                width: 14px;
+                background: linear-gradient(90deg, rgba(136, 19, 55, 0.14), transparent);
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                pointer-events: none;
+            }
+        }
+
+        /* Page Transition Animations */
+        .page-enter-next {
+            animation: flipInNext 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        .page-enter-prev {
+            animation: flipInPrev 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        @keyframes flipInNext {
+            0% {
+                opacity: 0;
+                transform: perspective(1200px) rotateY(-12deg) translateX(35px) scale(0.97);
+            }
+            100% {
+                opacity: 1;
+                transform: perspective(1200px) rotateY(0deg) translateX(0) scale(1);
+            }
+        }
+
+        @keyframes flipInPrev {
+            0% {
+                opacity: 0;
+                transform: perspective(1200px) rotateY(12deg) translateX(-35px) scale(0.97);
+            }
+            100% {
+                opacity: 1;
+                transform: perspective(1200px) rotateY(0deg) translateX(0) scale(1);
+            }
+        }
+
+        /* Floating Petals Background Canvas */
+        #ambient-canvas {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Fireworks Canvas */
+        #fireworks-canvas {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 60;
+        }
+
+        /* Washi Tape Decoration */
+        .washi-tape {
+            position: absolute;
+            width: 90px;
+            height: 24px;
+            background: rgba(251, 113, 133, 0.45);
+            backdrop-filter: blur(2px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+            z-index: 10;
+        }
+
+        /* Polaroid Frame */
+        .polaroid {
+            background: #ffffff;
+            padding: 12px 12px 34px 12px;
+            border-radius: 6px;
+            box-shadow: 0 10px 25px rgba(136, 19, 55, 0.16);
+            transition: transform 0.3s ease;
+        }
+        .polaroid:hover {
+            transform: scale(1.03) rotate(0deg) !important;
+        }
+
+        /* Heart Frame Mask */
+        .heart-frame {
+            clip-path: path('M140,35 C115,0 55,0 30,35 C5,70 15,120 140,210 C265,120 275,70 250,35 C225,0 165,0 140,35 Z');
+        }
+
+        /* Glowing Pulse */
+        @keyframes softPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.5); }
+            50% { transform: scale(1.04); box-shadow: 0 0 22px 6px rgba(225, 29, 72, 0.25); }
+        }
+        .pulse-love {
+            animation: softPulse 2.4s infinite ease-in-out;
+        }
+
+        /* Candle Flame Animation */
+        @keyframes flicker {
+            0%, 100% { transform: scale(1) rotate(-2deg); opacity: 0.95; }
+            50% { transform: scale(1.12) rotate(3deg); opacity: 1; }
+        }
+        .flame {
+            animation: flicker 0.6s infinite alternate ease-in-out;
+            transform-origin: bottom center;
+        }
+
+        /* Custom Scrollbar inside pages */
+        .page-scroll::-webkit-scrollbar {
+            width: 5px;
+        }
+        .page-scroll::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .page-scroll::-webkit-scrollbar-thumb {
+            background: rgba(244, 63, 94, 0.3);
+            border-radius: 999px;
+        }
+
+        /* Envelope Flap */
+        .envelope-flap {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-origin: top center;
+        }
+        .envelope-open .envelope-flap {
+            transform: rotateX(180deg);
+        }
+
+        /* Coupon Perforated Edge */
+        .coupon-card {
+            border: 2px dashed #fb7185;
+            background: linear-gradient(135deg, #fff1f2 0%, #ffffff 100%);
+        }
+
+        /* Animated Audio Waveform Bars */
+        @keyframes soundWave {
+            0%, 100% { height: 6px; }
+            50% { height: 22px; }
+        }
+        .wave-bar {
+            width: 3px;
+            height: 8px;
+            border-radius: 999px;
+            background: #e11d48;
+            transition: height 0.2s ease;
+        }
+        .wave-playing .wave-bar {
+            animation: soundWave 0.75s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="p-2 sm:p-4 md:p-6 select-none">
+
+    <!-- Hidden HTML5 Audio Elements for Background Song & Personal Voice Note -->
+    <audio id="bg-song-audio" loop preload="auto"></audio>
+    <audio id="voice-note-audio" preload="auto"></audio>
+
+    <!-- Ambient Floating Petals & Hearts -->
+    <canvas id="ambient-canvas"></canvas>
+    <!-- Celebratory Fireworks Canvas -->
+    <canvas id="fireworks-canvas"></canvas>
+
+    <!-- Top Floating Bar: Song Player, Page Progress & Quick Upload Drawer -->
+    <header class="relative z-20 w-full max-w-4xl flex flex-wrap items-center justify-between gap-2 mb-2 sm:mb-3 px-1">
+        <div class="flex items-center gap-2 bg-white/85 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-sm border border-rose-200">
+            <span class="text-rose-500 animate-bounce">❤️</span>
+            <span class="text-xs sm:text-sm font-semibold text-rose-900 tracking-wide">For Shonaaa Betuuuuuuu</span>
+        </div>
+
+        <!-- Continuous Song Mini-Controller -->
+        <div class="flex items-center gap-2 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full shadow-sm border border-rose-200">
+            <button id="music-toggle" onclick="toggleBackgroundSong()" title="Play / Pause Our Song"
+                class="w-7 h-7 rounded-full bg-rose-500 hover:bg-rose-600 text-white flex items-center justify-center transition active:scale-90">
+                <i id="music-icon" class="fa-solid fa-play text-[11px] ml-0.5"></i>
+            </button>
+            <div class="flex flex-col pr-1 max-w-[130px] sm:max-w-[180px]">
+                <span id="song-title-label" class="text-[11px] font-semibold text-rose-950 truncate">Our Special Song 🎵</span>
+                <span id="song-status-label" class="text-[9px] text-rose-500 leading-none">Tap play for music</span>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-1.5">
+            <!-- Quick Customize / Test Media Button -->
+            <button onclick="openStudioModal()" title="Upload / Test Photos, Song & Voice Note"
+                class="bg-white/85 hover:bg-rose-50 backdrop-blur-md px-3 py-1.5 rounded-full shadow-sm border border-rose-200 text-xs font-semibold text-rose-700 flex items-center gap-1.5 transition active:scale-95">
+                <i class="fa-solid fa-wand-magic-sparkles text-rose-500"></i>
+                <span class="hidden sm:inline">Media Studio</span>
+            </button>
+
+            <!-- Page Counter Pill -->
+            <div id="page-indicator" class="bg-white/85 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-sm border border-rose-200 text-xs sm:text-sm font-semibold text-rose-800">
+                Page 1 of 15
+            </div>
+        </div>
+    </header>
+
+    <!-- Main 15-Page Scrapbook Container -->
+    <main id="book-container" class="relative z-20 w-full max-w-4xl">
+        <div id="page-frame" class="scrapbook-page w-full min-h-[540px] sm:min-h-[600px] max-h-[80vh] overflow-y-auto page-scroll p-4 sm:p-8 md:p-9 flex flex-col justify-between">
+            <!-- Dynamic Page Content Injected Here -->
+            <div id="page-content" class="w-full flex-1 flex flex-col justify-center"></div>
+        </div>
+    </main>
+
+    <!-- Bottom Navigation Controls -->
+    <footer class="relative z-20 w-full max-w-4xl flex items-center justify-between mt-3 sm:mt-4 px-2 gap-3">
+        <button id="prev-btn" onclick="prevPage()"
+            class="flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full bg-white/90 hover:bg-white text-rose-800 font-medium text-xs sm:text-sm shadow-md border border-rose-200 transition disabled:opacity-40 disabled:pointer-events-none active:scale-95">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Previous</span>
+        </button>
+
+        <!-- Progress Dots -->
+        <div id="progress-dots" class="hidden sm:flex items-center gap-1.5 flex-wrap justify-center"></div>
+
+        <button id="next-btn" onclick="nextPage()"
+            class="flex items-center gap-2 px-5 sm:px-6 py-2.5 rounded-full bg-gradient-to-r from-rose-500 to-pink-600 hover:from-rose-600 hover:to-pink-700 text-white font-semibold text-xs sm:text-sm shadow-lg shadow-rose-500/30 transition disabled:opacity-40 disabled:pointer-events-none active:scale-95">
+            <span id="next-btn-text">Next Page</span>
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </footer>
+
+    <!-- Modal Box for "Open When..." & Custom Messages -->
+    <div id="modal-overlay" class="fixed inset-0 bg-rose-950/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4" onclick="closeModal(event)">
+        <div class="bg-[#fffaf5] border-2 border-rose-300 rounded-3xl max-w-md w-full p-6 sm:p-7 shadow-2xl relative text-center transform transition-all" onclick="event.stopPropagation()">
+            <button onclick="forceCloseModal()" class="absolute top-3.5 right-4 w-8 h-8 rounded-full bg-rose-100 text-rose-600 hover:bg-rose-200 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modal-emoji" class="text-4xl mb-2">💌</div>
+            <h3 id="modal-title" class="font-serif-luxury text-xl sm:text-2xl font-bold text-rose-900 mb-3"></h3>
+            <p id="modal-body" class="text-sm sm:text-base text-rose-800/90 leading-relaxed mb-5"></p>
+            <button onclick="forceCloseModal()" class="px-6 py-2 rounded-full bg-rose-500 text-white text-sm font-medium hover:bg-rose-600 transition">
+                Keep in My Heart ❤️
+            </button>
+        </div>
+    </div>
+
+    <!-- Full-Screen Photo Lightbox Modal (Navigate All 50 Photos Smoothly) -->
+    <div id="lightbox-overlay" class="fixed inset-0 bg-black/90 backdrop-blur-md z-50 hidden flex-col items-center justify-center p-4" onclick="closeLightbox(event)">
+        <div class="relative max-w-3xl w-full flex flex-col items-center" onclick="event.stopPropagation()">
+            <div class="w-full flex items-center justify-between text-white mb-3 px-1">
+                <span id="lightbox-counter" class="text-xs sm:text-sm font-semibold bg-white/15 px-3.5 py-1 rounded-full">Memory #1 of 50</span>
+                <button onclick="forceCloseLightbox()" class="w-9 h-9 rounded-full bg-white/15 hover:bg-rose-600 text-white flex items-center justify-center transition">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="relative w-full bg-rose-950/50 border border-white/20 rounded-2xl overflow-hidden flex items-center justify-center min-h-[280px] sm:min-h-[420px] max-h-[68vh]">
+                <img id="lightbox-img" src="" alt="Memory" class="max-h-[68vh] w-auto object-contain rounded-xl hidden">
+                <div id="lightbox-fallback" class="text-center p-8 text-rose-200 hidden">
+                    <i class="fa-solid fa-heart text-5xl text-rose-400 mb-3 animate-pulse"></i>
+                    <p id="lightbox-fallback-title" class="font-serif-luxury text-xl text-white mb-1">Memory #1</p>
+                    <p class="text-xs text-rose-200/80 mb-4">Upload <code>photos/1.jpg</code> to GitHub or preview a photo right now:</p>
+                    <label class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-600 hover:bg-rose-500 text-white text-xs font-semibold cursor-pointer shadow">
+                        <i class="fa-solid fa-camera"></i>
+                        <span>Preview Photo Now</span>
+                        <input type="file" accept="image/*" class="hidden" onchange="uploadSinglePhotoFromLightbox(event)">
+                    </label>
+                </div>
+
+                <!-- Prev / Next Lightbox Arrows -->
+                <button onclick="stepLightbox(-1)" class="absolute left-2 sm:left-4 w-10 h-10 rounded-full bg-black/50 hover:bg-rose-600 text-white flex items-center justify-center transition">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button onclick="stepLightbox(1)" class="absolute right-2 sm:right-4 w-10 h-10 rounded-full bg-black/50 hover:bg-rose-600 text-white flex items-center justify-center transition">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <p id="lightbox-caption" class="font-script text-2xl sm:text-3xl text-rose-200 mt-3 text-center"></p>
+        </div>
+    </div>
+
+    <!-- Media Studio Modal (Batch Upload 50 Photos, Song, Voice Note & GitHub Guide) -->
+    <div id="studio-overlay" class="fixed inset-0 bg-rose-950/70 backdrop-blur-sm z-50 hidden items-center justify-center p-3 sm:p-5" onclick="closeStudioModal(event)">
+        <div class="bg-[#fffaf5] border-2 border-rose-300 rounded-3xl max-w-xl w-full max-h-[88vh] overflow-y-auto page-scroll p-5 sm:p-7 shadow-2xl relative" onclick="event.stopPropagation()">
+            <button onclick="forceCloseStudio()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-rose-100 text-rose-600 hover:bg-rose-200 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h3 class="font-serif-luxury text-xl sm:text-2xl font-bold text-rose-950 mb-1">Album Media Studio 🎬❤️</h3>
+            <p class="text-xs text-rose-700 mb-4">Preview your 50 photos, song, and voice note right now—or follow the GitHub folder setup so she sees everything permanently!</p>
+
+            <!-- Live Browser Preview Uploaders -->
+            <div class="space-y-3 mb-5">
+                <div class="bg-white border border-rose-200 rounded-2xl p-3.5 flex items-center justify-between gap-3">
+                    <div>
+                        <h4 class="text-xs sm:text-sm font-bold text-rose-900">1. Select Up to 50 Photos at Once 📸</h4>
+                        <p id="studio-photo-count" class="text-[11px] text-rose-600">Select multiple images to fill slots #1–#50</p>
+                    </div>
+                    <label class="px-3.5 py-2 rounded-full bg-rose-500 hover:bg-rose-600 text-white text-xs font-semibold cursor-pointer flex-shrink-0">
+                        Choose Photos
+                        <input type="file" accept="image/*" multiple class="hidden" onchange="handleBatchPhotos(event)">
+                    </label>
+                </div>
+
+                <div class="bg-white border border-rose-200 rounded-2xl p-3.5 flex items-center justify-between gap-3">
+                    <div>
+                        <h4 class="text-xs sm:text-sm font-bold text-rose-900">2. Load Background Song (MP3/M4A) 🎵</h4>
+                        <p class="text-[11px] text-rose-600">Plays across all 15 pages automatically</p>
+                    </div>
+                    <label class="px-3.5 py-2 rounded-full bg-pink-500 hover:bg-pink-600 text-white text-xs font-semibold cursor-pointer flex-shrink-0">
+                        Choose Song
+                        <input type="file" accept="audio/*" class="hidden" onchange="handleSongUpload(event)">
+                    </label>
+                </div>
+
+                <div class="bg-white border border-rose-200 rounded-2xl p-3.5 flex items-center justify-between gap-3">
+                    <div>
+                        <h4 class="text-xs sm:text-sm font-bold text-rose-900">3. Load or Record Your Voice Note 🎙️</h4>
+                        <p class="text-[11px] text-rose-600">Embedded on Page 2 & Page 14 for her</p>
+                    </div>
+                    <label class="px-3.5 py-2 rounded-full bg-amber-500 hover:bg-amber-600 text-white text-xs font-semibold cursor-pointer flex-shrink-0">
+                        Choose Audio
+                        <input type="file" accept="audio/*" class="hidden" onchange="handleVoiceNoteUpload(event)">
+                    </label>
+                </div>
+            </div>
+
+            <!-- Permanent GitHub Folder Instructions -->
+            <div class="bg-rose-100/80 border border-rose-300 rounded-2xl p-4 text-left">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-rose-900 mb-1.5">
+                    <i class="fa-brands fa-github mr-1"></i> How to Make It Permanent on Your GitHub Link:
+                </h4>
+                <ol class="text-xs text-rose-900/90 space-y-1 list-decimal ml-4">
+                    <li>In your repo <strong>divyambais66-alt/for-shonaaa-betuuuuuuu</strong>, create a folder named <code class="bg-white px-1.5 py-0.5 rounded font-mono">photos</code> and upload your 50 photos named <code class="bg-white px-1.5 py-0.5 rounded font-mono">1.jpg</code> to <code class="bg-white px-1.5 py-0.5 rounded font-mono">50.jpg</code>.</li>
+                    <li>Upload your romantic song in the root folder as <code class="bg-white px-1.5 py-0.5 rounded font-mono">song.mp3</code>.</li>
+                    <li>Upload your personal voice recording in the root folder as <code class="bg-white px-1.5 py-0.5 rounded font-mono">voicenote.mp3</code>.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /* ==========================================================================
+           EASY GITHUB PAGES CONFIGURATION (EDIT FILENAMES OR CAPTIONS HERE!)
+           ========================================================================== */
+        const ALBUM_CONFIG = {
+            herName: "Shonaaa Betuuuuuuu",
+            songPath: "song.mp3",               // Upload 'song.mp3' to your GitHub repo root
+            songTitle: "Our Favorite Song ❤️",
+            voiceNotePath: "voicenote.mp3",     // Upload 'voicenote.mp3' to your GitHub repo root
+            voiceNoteTitle: "My Birthday Voice Note For You 🎙️",
+            photoFolder: "photos",              // Upload '1.jpg' through '50.jpg' inside /photos/
+            photoExtension: "jpg",              // Change to 'png' or 'jpeg' if needed
+            totalPhotos: 50
+        };
+
+        // 50 Romantic Captions corresponding to Photos #1 through #50
+        const PHOTO_CAPTIONS = [
+            "Where our forever story began ✨",
+            "The smile that brightens my darkest days ❤️",
+            "Every moment with you feels like magic 💫",
+            "My favorite notification & favorite person 🥰",
+            "Sweet beginnings & endless butterflies 🦋",
+            "Looking at you is my favorite pastime 💖",
+            "Pure happiness captured in one frame 🌸",
+            "You make ordinary days extraordinary ✨",
+            "My safe place, my peace, my home 🏡❤️",
+            "That contagious laugh I adore so much 😊",
+            "Two hearts beating as one 💕",
+            "Sunshine mixed with a little bit of magic ☀️",
+            "Every second with you is a treasure 💎",
+            "Falling in love with you all over again 🌹",
+            "Our unforgettable date adventure 🥂",
+            "Hand in hand, wherever life takes us 🤝",
+            "Creating memories I'll cherish forever 📸",
+            "The prettiest soul inside and out 👑",
+            "Late-night talks & endless giggles 🌙",
+            "With you, every place feels like paradise 🌴",
+            "My partner in crime & best friend 😜❤️",
+            "Stealing glances & stealing my heart 💘",
+            "A snapshot of pure love 🥰",
+            "You are my today and all of my tomorrows ✨",
+            "Making every mile worth the journey 🚗💨",
+            "My favorite chapter in life's book 📖❤️",
+            "Candid perfection, my Shonaaa 😍",
+            "The spark in your eyes lights up my world ✨",
+            "So grateful the universe gave me you 🌟",
+            "Every picture tells how much I love you 💕",
+            "Cute, silly, and completely mine 😘",
+            "A love deeper than the ocean 🌊❤️",
+            "Holding onto this memory forever 🤗",
+            "You are the melody to my heart 🎶",
+            "Unfiltered joy when I'm around you 🌸",
+            "My dream come true in human form 💫",
+            "Cheers to a million more snapshots together 🥳",
+            "Simply irresistible, always adorable 💖",
+            "Walking into the future side by side 👣",
+            "My forever Valentine & birthday queen 👑",
+            "Love looks so good on us ❤️",
+            "Through every season, I choose you 🍂🌸",
+            "Your happiness is my biggest priority 🥰",
+            "A thousand words couldn't describe this love 💌",
+            "My lucky charm in every way 🍀💕",
+            "Forever isn't long enough with you ⏳❤️",
+            "Counting blessings—you're #1 through #50 ✨",
+            "The brightest star in my galaxy 🌌",
+            "Here's to celebrating YOU today & always 🎂",
+            "Happy Birthday, My Shonaaa Betuuuuuuu! ❤️🎉"
+        ];
+
+        /* ==========================================================================
+           STATE & PERSISTENT MEMORY STORAGE
+           ========================================================================== */
+        const TOTAL_PAGES = 15;
+        let currentPage = 1;
+        let transitionDirection = 'next';
+        let currentLightboxPhoto = 1;
+
+        // Pre-populate photo URLs pointing to GitHub folder (`photos/1.jpg` ... `photos/50.jpg`)
+        const photoSources = {};
+        const photoFailedLoad = {};
+        for (let i = 1; i <= ALBUM_CONFIG.totalPhotos; i++) {
+            photoSources[i] = `${ALBUM_CONFIG.photoFolder}/${i}.${ALBUM_CONFIG.photoExtension}`;
+            photoFailedLoad[i] = false;
+        }
+
+        const appState = {
+            songSrc: ALBUM_CONFIG.songPath,
+            songTitle: ALBUM_CONFIG.songTitle,
+            songPlaying: false,
+            usingFallbackSynth: false,
+
+            voiceSrc: ALBUM_CONFIG.voiceNotePath,
+            voicePlaying: false,
+            mediaRecorder: null,
+            recordedChunks: [],
+            isRecording: false,
+
+            envelopeOpened: false,
+            letterTyped: false,
+            revealedReasons: {},
+            candlesBlown: [false, false, false, false, false],
+            bucketList: [
+                { text: "Stargazing night with warm blankets & endless talks ✨", checked: true },
+                { text: "Late-night ice cream drive listening to our favorite songs 🍦", checked: false },
+                { text: "Watching the sunrise together hand-in-hand 🌅", checked: false },
+                { text: "Capturing 500 more silly & cute selfies 📸", checked: false },
+                { text: "Traveling to our dream destination together ✈️❤️", checked: false }
+            ],
+            redeemedCoupons: [false, false, false, false],
+            connectedStars: [],
+            saidYes: false,
+            noDodges: 0
+        };
+
+        /* ==========================================================================
+           BACKGROUND SONG & PERSONAL VOICE NOTE AUDIO ENGINE
+           ========================================================================== */
+        const bgAudio = document.getElementById('bg-song-audio');
+        const voiceAudio = document.getElementById('voice-note-audio');
+        bgAudio.src = appState.songSrc;
+        voiceAudio.src = appState.voiceSrc;
+
+        // Web Audio API Romantic Piano Fallback (if song.mp3 isn't uploaded to GitHub yet)
+        let audioCtx = null;
+        let synthInterval = null;
+        const melodyNotes = [
+            349.23, 440.00, 523.25, 659.25,
+            293.66, 349.23, 440.00, 523.25,
+            233.08, 349.23, 440.00, 523.25,
+            261.63, 392.00, 493.88, 587.33
+        ];
+        let noteIndex = 0;
+
+        function playSoftNote(freq) {
+            if (!audioCtx) return;
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+            gain.gain.setValueAtTime(0.001, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.04, audioCtx.currentTime + 0.15);
+            gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 1.8);
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.start();
+            osc.stop(audioCtx.currentTime + 1.85);
+        }
+
+        function startFallbackSynth() {
+            appState.usingFallbackSynth = true;
+            if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+            clearInterval(synthInterval);
+            playSoftNote(melodyNotes[noteIndex++ % melodyNotes.length]);
+            synthInterval = setInterval(() => {
+                if (appState.songPlaying && appState.usingFallbackSynth) {
+                    playSoftNote(melodyNotes[noteIndex++ % melodyNotes.length]);
+                }
+            }, 850);
+        }
+
+        function stopFallbackSynth() {
+            clearInterval(synthInterval);
+        }
+
+        function updateSongUI() {
+            const icon = document.getElementById('music-icon');
+            const titleEl = document.getElementById('song-title-label');
+            const statusEl = document.getElementById('song-status-label');
+            if (!icon) return;
+
+            titleEl.textContent = appState.songTitle;
+            if (appState.songPlaying) {
+                icon.className = 'fa-solid fa-pause text-[11px]';
+                statusEl.textContent = appState.usingFallbackSynth ? 'Playing romantic melody ✨' : 'Playing our song 🎶';
+            } else {
+                icon.className = 'fa-solid fa-play text-[11px] ml-0.5';
+                statusEl.textContent = 'Tap play for music';
+            }
+        }
+
+        function toggleBackgroundSong() {
+            if (!appState.songPlaying) {
+                // Pause voice note if it's currently playing
+                if (appState.voicePlaying) {
+                    pauseVoiceNote();
+                }
+                appState.songPlaying = true;
+                bgAudio.play().then(() => {
+                    appState.usingFallbackSynth = false;
+                    updateSongUI();
+                }).catch(() => {
+                    // Graceful fallback to synthesized romantic piano if song.mp3 isn't in repo yet
+                    startFallbackSynth();
+                    updateSongUI();
+                });
+            } else {
+                appState.songPlaying = false;
+                bgAudio.pause();
+                stopFallbackSynth();
+                updateSongUI();
+            }
+        }
+
+        /* Personal Voice Note Controls */
+        let wasSongPlayingBeforeVoice = false;
+
+        function toggleVoiceNote() {
+            if (!appState.voicePlaying) {
+                // Automatically pause background song so her focus is 100% on your voice!
+                if (appState.songPlaying) {
+                    wasSongPlayingBeforeVoice = true;
+                    toggleBackgroundSong();
+                } else {
+                    wasSongPlayingBeforeVoice = false;
+                }
+
+                voiceAudio.play().then(() => {
+                    appState.voicePlaying = true;
+                    renderPage(currentPage);
+                }).catch(() => {
+                    // Alert nicely via modal if voicenote.mp3 hasn't been uploaded yet
+                    openMessageModal({
+                        emoji: "🎙️",
+                        title: "Voice Note Ready to Link!",
+                        msg: "Upload your recording as 'voicenote.mp3' in your GitHub repo—or tap 'Record / Upload Voice' right on this card to test it immediately!"
+                    });
+                });
+            } else {
+                pauseVoiceNote();
+            }
+        }
+
+        function pauseVoiceNote() {
+            voiceAudio.pause();
+            appState.voicePlaying = false;
+            renderPage(currentPage);
+            if (wasSongPlayingBeforeVoice && !appState.songPlaying) {
+                toggleBackgroundSong();
+            }
+        }
+
+        voiceAudio.addEventListener('ended', () => {
+            appState.voicePlaying = false;
+            renderPage(currentPage);
+            if (wasSongPlayingBeforeVoice && !appState.songPlaying) {
+                toggleBackgroundSong();
+            }
+        });
+
+        // Browser Microphone Recorder so user can record a voice note directly if desired!
+        async function toggleBrowserRecording() {
+            if (!appState.isRecording) {
+                try {
+                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                    appState.recordedChunks = [];
+                    appState.mediaRecorder = new MediaRecorder(stream);
+                    appState.mediaRecorder.ondataavailable = (e) => {
+                        if (e.data.size > 0) appState.recordedChunks.push(e.data);
+                    };
+                    appState.mediaRecorder.onstop = () => {
+                        const blob = new Blob(appState.recordedChunks, { type: 'audio/webm' });
+                        const url = URL.createObjectURL(blob);
+                        appState.voiceSrc = url;
+                        voiceAudio.src = url;
+                        stream.getTracks().forEach(t => t.stop());
+                        renderPage(currentPage);
+                    };
+                    appState.mediaRecorder.start();
+                    appState.isRecording = true;
+                    renderPage(currentPage);
+                } catch (err) {
+                    openMessageModal({
+                        emoji: "🎤",
+                        title: "Microphone Access Needed",
+                        msg: "Please allow microphone permission in your browser, or upload an existing audio file using 'Upload Audio'."
+                    });
+                }
+            } else {
+                appState.mediaRecorder.stop();
+                appState.isRecording = false;
+            }
+        }
+
+        /* ==========================================================================
+           REUSABLE PHOTO CARD & VOICE NOTE WIDGET BUILDERS
+           ========================================================================== */
+        function buildPhotoCardHTML(photoNum, compact = false) {
+            const src = photoSources[photoNum];
+            const failed = photoFailedLoad[photoNum];
+            const caption = PHOTO_CAPTIONS[photoNum - 1] || `Memory #${photoNum}`;
+
+            return `
+                <div onclick="openLightbox(${photoNum})"
+                    class="group cursor-pointer bg-white ${compact ? 'p-1.5 pb-2.5' : 'p-2 pb-3'} rounded-xl shadow-md hover:shadow-xl border border-rose-100 transition transform hover:-translate-y-1 flex flex-col">
+                    <div class="relative aspect-square w-full rounded-lg overflow-hidden bg-gradient-to-br from-rose-100 via-pink-50 to-amber-50 flex items-center justify-center">
+                        ${!failed ? `
+                            <img src="${src}" alt="Memory #${photoNum}"
+                                onerror="handlePhotoError(${photoNum})"
+                                class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        ` : `
+                            <div class="flex flex-col items-center justify-center p-2 text-center">
+                                <span class="text-lg sm:text-xl mb-0.5">📸</span>
+                                <span class="text-[10px] sm:text-xs font-bold text-rose-700">Photo #${photoNum}</span>
+                                <span class="text-[9px] text-rose-500 leading-tight mt-0.5">Tap to preview</span>
+                            </div>
+                        `}
+                        <span class="absolute top-1.5 left-1.5 bg-black/55 backdrop-blur-sm text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full">
+                            #${photoNum}
+                        </span>
+                    </div>
+                    <p class="font-script text-sm sm:text-base text-rose-900 text-center mt-1.5 px-1 truncate">
+                        ${caption}
+                    </p>
+                </div>
+            `;
+        }
+
+        function handlePhotoError(photoNum) {
+            if (!photoFailedLoad[photoNum]) {
+                photoFailedLoad[photoNum] = true;
+                renderPage(currentPage);
+            }
+        }
+
+        function buildVoiceNoteCardHTML() {
+            return `
+                <div class="w-full max-w-lg bg-gradient-to-r from-rose-100 via-pink-50 to-amber-50 border-2 border-rose-300 rounded-2xl p-4 shadow-md mt-4">
+                    <div class="flex items-center justify-between gap-3">
+                        <button onclick="toggleVoiceNote()"
+                            class="w-12 h-12 rounded-full bg-gradient-to-br from-rose-500 to-pink-600 text-white flex items-center justify-center shadow-lg hover:scale-105 transition flex-shrink-0">
+                            <i class="fa-solid ${appState.voicePlaying ? 'fa-pause' : 'fa-play ml-0.5'} text-base"></i>
+                        </button>
+
+                        <div class="flex-1 text-left">
+                            <div class="flex items-center gap-1.5">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-rose-600">Personal Voice Message</span>
+                                <span class="text-xs">🎙️</span>
+                            </div>
+                            <h4 class="font-serif-luxury font-bold text-rose-950 text-sm sm:text-base">${ALBUM_CONFIG.voiceNoteTitle}</h4>
+                            
+                            <!-- Animated Waveform -->
+                            <div class="flex items-center gap-1 h-6 mt-1 ${appState.voicePlaying ? 'wave-playing' : ''}">
+                                ${Array.from({ length: 18 }).map((_, i) => `
+                                    <div class="wave-bar" style="animation-delay: ${(i % 5) * 0.12}s"></div>
+                                `).join('')}
+                                <span class="text-[10px] text-rose-600 font-medium ml-2">
+                                    ${appState.voicePlaying ? 'Playing my voice...' : 'Tap play to listen ❤️'}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Record or Upload Audio Controls -->
+                    <div class="flex flex-wrap items-center justify-end gap-2 mt-3 pt-2.5 border-t border-rose-200/80">
+                        <button onclick="toggleBrowserRecording()"
+                            class="text-[11px] font-semibold px-3 py-1 rounded-full ${appState.isRecording ? 'bg-red-600 text-white animate-pulse' : 'bg-white text-rose-700 border border-rose-300 hover:bg-rose-50'} transition">
+                            <i class="fa-solid fa-microphone mr-1"></i>
+                            ${appState.isRecording ? 'Stop Recording' : 'Record Voice'}
+                        </button>
+                        <label class="text-[11px] font-semibold px-3 py-1 rounded-full bg-white text-rose-700 border border-rose-300 hover:bg-rose-50 cursor-pointer transition">
+                            <i class="fa-solid fa-upload mr-1"></i> Upload Audio
+                            <input type="file" accept="audio/*" class="hidden" onchange="handleVoiceNoteUpload(event)">
+                        </label>
+                    </div>
+                </div>
+            `;
+        }
+
+        /* ==========================================================================
+           ALL 15 ROMANTIC SCRAPBOOK PAGES TEMPLATES & INTERACTIONS
+           ========================================================================== */
+        function renderPage(pageNum) {
+            const container = document.getElementById('page-content');
+            const frame = document.getElementById('page-frame');
+            const indicator = document.getElementById('page-indicator');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const nextBtnText = document.getElementById('next-btn-text');
+
+            indicator.textContent = `Page ${pageNum} of ${TOTAL_PAGES}`;
+            prevBtn.disabled = pageNum === 1;
+            nextBtn.disabled = pageNum === TOTAL_PAGES;
+            nextBtnText.textContent = pageNum === TOTAL_PAGES - 1 ? 'The Final Question ❤️' : 'Next Page';
+
+            // Update Progress Dots
+            const dotsEl = document.getElementById('progress-dots');
+            dotsEl.innerHTML = '';
+            for (let i = 1; i <= TOTAL_PAGES; i++) {
+                const dot = document.createElement('button');
+                dot.onclick = () => goToPage(i);
+                dot.title = `Go to Page ${i}`;
+                dot.className = `h-2 rounded-full transition-all ${
+                    i === pageNum 
+                        ? 'w-6 bg-rose-600' 
+                        : i < pageNum 
+                            ? 'w-2 bg-rose-400 hover:bg-rose-500' 
+                            : 'w-2 bg-white/80 hover:bg-rose-300'
+                }`;
+                dotsEl.appendChild(dot);
+            }
+
+            // Trigger Page Flip Animation
+            frame.classList.remove('page-enter-next', 'page-enter-prev');
+            void frame.offsetWidth;
+            frame.classList.add(transitionDirection === 'next' ? 'page-enter-next' : 'page-enter-prev');
+
+            switch (pageNum) {
+                case 1:
+                    container.innerHTML = `
+                        <div class="text-center flex flex-col items-center justify-center py-3 relative">
+                            <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-rose-100 text-rose-700 text-xs font-semibold uppercase tracking-widest mb-3 border border-rose-200">
+                                ✨ 50 Memories • 1 Voice Note • 1 Song ✨
+                            </div>
+                            <h1 class="font-script text-5xl sm:text-6xl md:text-7xl text-rose-600 drop-shadow-sm mb-2 leading-tight">
+                                Happy Birthday,<br>My Shonaaa Betuuuuuuu!
+                            </h1>
+                            <div class="w-28 h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent my-2.5"></div>
+                            <p class="font-serif-luxury italic text-sm sm:text-lg text-rose-900/80 max-w-lg mb-5 leading-relaxed">
+                                "15 pages packed with 50 of our favorite memories, a personal message in my voice, our song, and one special question at the end..."
+                            </p>
+
+                            <!-- Decorative Golden Locket Emblem -->
+                            <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-rose-400 via-pink-500 to-amber-500 p-1 shadow-xl mb-6 pulse-love">
+                                <div class="w-full h-full rounded-full bg-[#fffaf5] flex flex-col items-center justify-center">
+                                    <span class="text-3xl sm:text-4xl">🎂</span>
+                                    <span class="text-[10px] font-bold tracking-widest uppercase text-rose-600 mt-1">50 Memories</span>
+                                </div>
+                            </div>
+
+                            <button onclick="startAlbum()"
+                                class="px-8 py-3.5 rounded-full bg-gradient-to-r from-rose-500 via-pink-600 to-rose-600 text-white font-semibold text-sm sm:text-base shadow-xl shadow-rose-500/30 hover:scale-105 transition flex items-center gap-2.5">
+                                <span>Start Album & Play Our Song</span>
+                                <i class="fa-solid fa-heart animate-ping text-xs"></i>
+                            </button>
+                        </div>
+                    `;
+                    break;
+
+                case 2:
+                    container.innerHTML = `
+                        <div class="flex flex-col items-center text-center">
+                            <span class="text-xs uppercase tracking-widest text-rose-500 font-semibold mb-1">Chapter I</span>
+                            <h2 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-rose-900 mb-3">Love Letter & My Voice Note 💌🎙️</h2>
+                            
+                            ${!appState.envelopeOpened ? `
+                                <div onclick="openLoveEnvelope()" class="cursor-pointer group my-3 w-full max-w-sm">
+                                    <div class="relative bg-gradient-to-b from-rose-200 to-rose-300 rounded-2xl p-6 shadow-xl border-2 border-rose-300 transition transform group-hover:scale-105">
+                                        <div class="w-14 h-14 mx-auto rounded-full bg-rose-600 text-white flex items-center justify-center text-2xl shadow-lg mb-2 border-4 border-amber-200">
+                                            ❤️
+                                        </div>
+                                        <p class="font-script text-2xl text-rose-950">For My Shonaaa Betuuuuuuu</p>
+                                        <p class="text-xs text-rose-800 mt-1 font-medium animate-pulse">Tap the wax seal to open your letter ✨</p>
+                                    </div>
+                                </div>
+                            ` : `
+                                <div class="bg-white/90 border border-rose-200 rounded-2xl p-4 sm:p-6 shadow-inner text-left max-w-xl w-full relative">
+                                    <div class="font-script text-2xl text-rose-600 mb-1">My Dearest Shonaaa Betuuuuuuu,</div>
+                                    <p id="love-letter-text" class="text-xs sm:text-sm text-rose-950/90 leading-relaxed whitespace-pre-line font-normal"></p>
+                                    <div class="mt-3 text-right font-script text-xl text-rose-600">
+                                        Forever & Always Yours ❤️
+                                    </div>
+                                </div>
+                            `}
+
+                            <!-- Embedded Personal Voice Note Player -->
+                            ${buildVoiceNoteCardHTML()}
+                        </div>
+                    `;
+                    if (appState.envelopeOpened) {
+                        runLetterTypewriter();
+                    }
+                    break;
+
+                case 3:
+                    container.innerHTML = `
+                        <div class="flex flex-col items-center">
+                            <span class="text-xs uppercase tracking-widest text-rose-500 font-semibold mb-1">Chapter II • Photos #1 – #4</span>
+                            <h2 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-rose-900 mb-4 text-center">Our Beautiful Journey ✨</h2>
+                            
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 w-full max-w-2xl mb-4">
+                                ${[1, 2, 3, 4].map(n => buildPhotoCardHTML(n, true)).join('')}
+                            </div>
+
+                            <div class="relative border-l-2 border-rose-300 ml-3 space-y-2.5 max-w-2xl w-full">
+                                <div class="relative pl-5">
+                                    <span class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] flex items-center justify-center shadow">💫</span>
+                                    <div class="bg-white/85 p-2.5 rounded-xl border border-rose-100 shadow-sm">
+                                        <h3 class="font-serif-luxury font-bold text-rose-900 text-xs sm:text-sm">The Day Everything Changed</h3>
+                                        <p class="text-[11px] sm:text-xs text-rose-800/80">The moment you walked into my life, ordinary days turned into my favorite memories.</p>
+                                    </div>
+                                </div>
+                                <div class="relative pl-5">
+                                    <span class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-pink-500 text-white text-[10px] flex items-center justify-center shadow">💖</span>
+                                    <div class="bg-white/85 p-2.5 rounded-xl border border-rose-100 shadow-sm">
+                                        <h3 class="font-serif-luxury font-bold text-rose-900 text-xs sm:text-sm">Today: Celebrating YOU!</h3>
+                                        <p class="text-[11px] sm:text-xs text-rose-800/80">Celebrating the brightest soul in my world—my Shonaaa Betuuuuuuu!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    break;
+
+                case 4:
+                    container.innerHTML = `
+                        <div class="flex flex-col items-center text-center">
+                            <span class="text-xs uppercase tracking-widest text-rose-500 font-semibold mb-1">Gallery I • Photos #5 – #14 (10 Memories)</span>
+                            <h2 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-rose-900 mb-1">Firsts & Sweet Beginnings 📸</h2>
+                            <p class="text-xs text-rose-600 mb-4">Tap any photo to open full-screen view ✨</p>
+                            
+                            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2.5 w-full">
+                                ${Array.from({ length: 10 }, (_, idx) => buildPhotoCardHTML(5 + idx, true)).join('')}
+                            </div>
+                        </div>
+                    `;
+                    break;
+
+                case 5:
+                    const reasons = [
+                        "Your pure & golden heart 💖",
+                        "How your eyes light up when you laugh ✨",
+                        "The comfort I feel just being near you 🥰",
+                        "Your adorable voice & cute expressions 🌸",
+                        "How deeply you care about the people you love 🤍",
+                        "Every silly moment we share together 😜",
+                        "Your strength, grace & kindness 👑",
+                        "How you make even boring days exciting 🌈",
+                        "The way you understand me without words 💫",
+                        "Simply because you are YOU, my Shonaaa! ❤️"
+                    ];
+                    container.innerHTML = `
+                        <div class="flex flex-col items-center">
+                            <span class="text-xs uppercase tracking-widest text-rose-500 font-semibold mb-1">Chapter III</span>
+                            <h2 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-rose-900 mb-1 text-center">10 Reasons Why I Adore You</h2>
+                            <p class="text-xs text-rose-600 mb-4">Tap each heart card to reveal a reason 💕</p>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full max-w-2xl">
+                                ${reasons.map((r, idx) => {
+                                    const revealed = !!appState.revealedReasons[idx];
+                                    return `
+                                        <button onclick="revealReason(${idx})"
+                                            class="p-3 rounded-xl border text-left transition flex items-center gap-3 ${
+                                                revealed 
+                                                    ? 'bg-white border-rose-300 shadow-sm text-rose-900' 
+                                                    : 'bg-gradient-to-r from-rose-500 to-pink-500 border-rose-400 text-white hover:opacity-95 shadow'
+                                            }">
+                                            <span class="w-7 h-7 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-bold ${
+                                                revealed ? 'bg-rose-100 text-rose-600' : 'bg-white/25 text-white'
+                                            }">
+                                                ${revealed ? '❤️' : `#${idx + 1}`}
+                                            </span>
+                                            <span class="text-xs sm:text-sm font-medium">
+                                                ${revealed ? r : 'Tap to unlock this secret reason...'}
+                                            </span>
+                                        </button>
+                                    `;
+                                }).join('')}
+                            </div>
+                        </div>
+                    `;
+                    break;
+
+                case 6:
+                    container.innerHTML = `
+                        <div class="flex flex-col items-center text-center">
+                            <span class="text-xs uppercase tracking-widest text-rose-500 font-semibold mb-1">Gallery II • Photos #15 – #26 (12 Memories)</span>
+                            <h2 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-rose-900 mb-1">Our Favorite Dates & Adventures 🎞️</h2>
+                            <p class="text-xs text-rose-600 mb-4">Tap any Polaroid to view full-screen 💕</p>
+                            
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 w-full">
+                                ${Array.from({ length: 12 }, (_, idx) => buildPhotoCardHTML(15 + idx, true)).join('')}
+                            </div>
+                        </div>
+                    `;
+                    break;
+
+                case 7:
+                    container.innerHTML = `
+                        <div class="flex flex-col items-center text-center">
+                            <span class="text-xs uppercase tracking-widest text-rose-500 font-semibold mb-1">Interactive Surprise</span>
+                            <h2 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-rose-900 mb-2">Scratch to Reveal My Secret Wish 🪙</h2>
+                            <p class="text-xs sm:text-sm text-rose-700 mb-4">Rub your finger or mouse across the golden card below!</p>
+                            
+                            <div class="relative w-full max-w-sm h-52 rounded-2xl overflow-hidden shadow-xl border-4 border-amber-300 bg-gradient-to-br from-rose-50 via-white to-pink-100 flex flex-col items-center justify-center p-5">
+                                <div class="text-center z-0">
+                                    <div class="text-3xl mb-1">👑❤️</div>
+                                    <h3 class="font-script text-3xl sm:text-4xl text-rose-600 font-bold mb-1">You Are My World!</h3>
+                                    <p class="text-xs sm:text-sm text-rose-900 font-medium">
+                                        "No matter how many birthdays pass, my favorite place will always be right next to you, Shonaaa Betuuuuuuu."
+                                    </p>
+                                </div>
+                                <canvas id="scratch-canvas" class="absolute inset-0 w-full h-full z-10 cursor-pointer touch-none"></canvas>
+                            </div>
+                        </div>
+                    `;
+                    setTimeout(initScratchCard, 50);
+                    break;
+
+                case 8:
+                    const envelopes = [
+                        {
+                            emoji: "🥺",
+                            label: "Open when you miss me",
+                            title: "Whenever You Miss Me...",
+                            msg: "Close your eyes, take a deep breath, and remember that my heart is always holding yours. Distance or time can never change how deeply I love you, my Shonaaa Betuuuuuuu! ❤️"
+                        },
+                        {
+                            emoji: "😊",
+                            label: "Open when you need a smile",
+                            title: "A Little Reminder For Your Smile",
+                            msg: "Did you know your smile is literally my favorite sight in the entire universe? Whatever is worrying you right now, you've got this—and I'm always cheering for you! ✨"
+                        },
+                        {
+                            emoji: "😴",
+                            label: "Open when you're tired",
+                            title: "Rest Your Sweet Soul",
+                            msg: "You work so hard and shine so bright. Take a moment to rest, drink some water, and imagine me giving you the warmest, tightest hug right now. 🤗💕"
+                        },
+                        {
+                            emoji: "💖",
+                            label: "Open when you want to feel loved",
+                            title: "You Are Loved Beyond Measure",
+                            msg: "Today, tomorrow, and every day after—you are cherished, adored, and the most precious person in my life. Happy Birthday my love! 🎂🌹"
+                        }
+                    ];
+                    container.innerHTML = `
+                        <div class="flex flex-col items-center text-center">
+                            <span class="text-xs uppercase tracking-widest text-rose-500 font-semibold mb-1">Chapter IV</span>
+                            <h2 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-rose-900 mb-2">"Open When..." Love Notes ✉️</h2>
+                            <p class="text-xs sm:text-sm text-rose-700 mb-5">Tap any envelope to read the secret message inside</p>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 w-full max-w-lg">
+                                ${envelopes.map((env, i) => `
+                                    <button onclick='openMessageModal(${JSON.stringify(env)})'
+                                        class="group bg-white hover:bg-rose-50 border-2 border-rose-200 hover:border-rose-400 rounded-2xl p-4 shadow-sm hover:shadow-md transition flex items-center gap-3.5 text-left">
+                                        <div class="w-12 h-12 rounded-xl bg-rose-100 group-hover:scale-110 transition flex items-center justify-center text-2xl flex-shrink-0">
+                                            ${env.emoji}
+                                        </div>
+                                        <div>
+                                            <span class="text-[10px] uppercase tracking-wider text-rose-400 font-bold">Envelope #${i + 1}</span>
+                                            <h3 class="font-serif-luxury font-bold text-rose-900 text-sm sm:text-base">${env.label}</h3>
+                                        </div>
+                                    </button>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                    break;
+
+                case 9:
+                    container.innerHTML = `
+                        <div class="flex flex-col items-center text-center">
+                            <span class="text-xs uppercase tracking-widest text-rose-500 font-semibold mb-1">Gallery III • Photos #27 – #38 (12 Memories)</span>
+                            <h2 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-rose-900 mb-1">Candid Smiles & Sweet Moments 🌹</h2>
+                            <p class="text-xs text-rose-600 mb-4">Tap any photo to zoom & swipe through memories ✨</p>
+                            
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 w-full">
+                                ${Array.from({ length: 12 }, (_, idx) => buildPhotoCardHTML(27 + idx, true)).join('')}
+                            </div>
+                        </div>
+                    `;
+                    break;
+
+                case 10:
+                    const allBlown = appState.candlesBlown.every(Boolean);
+                    container.innerHTML = `
+                        <div class="flex flex-col items-center text-center">
+                            <span class="text-xs uppercase tracking-widest text-rose-500 font-semibold mb-1">Make A Wish!</span>
+                            <h2 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-rose-900 mb-1">Blow Out Your Birthday Candles 🎂</h2>
+                            <p class="text-xs sm:text-sm text-rose-700 mb-6">
+                                ${allBlown ? '🎉 Yay!! May all your dreams come true, Shonaaa! 🎉' : 'Tap each glowing candle flame to make a wish and blow it out!'}
+                            </p>
+                            
+                            <div class="relative mt-4 mb-4 flex flex-col items-center">
+                                <div class="flex items-end gap-5 sm:gap-7 mb-[-4px] z-10">
+                                    ${appState.candlesBlown.map((blown, idx) => `
+                                        <button onclick="blowCandle(${idx})" class="flex flex-col items-center group focus:outline-none">
+                                            ${!blown 
+                                                ? `<div class="w-4 h-6 rounded-full bg-gradient-to-t from-amber-500 via-yellow-300 to-white flame shadow-[0_0_15px_#f59e0b] mb-1"></div>`
+                                                : `<div class="text-xs text-gray-400 mb-1 animate-bounce">💨</div>`
+                                            }
+                                            <div class="w-3 h-12 rounded-t-sm bg-gradient-to-b from-pink-300 via-white to-rose-400 border border-rose-300 shadow-sm"></div>
+                                        </button>
+                                    `).join('')}
+                                </div>
+                                <div class="w-48 sm:w-56 h-14 bg-gradient-to-r from-rose-300 via-pink-200 to-rose-300 rounded-t-2xl border-b-4 border-rose-400 shadow-md flex items-center justify-center">
+                                    <span class="font-script text-xl text-rose-800">Shonaaa Betuuuuuuu</span>
+                                </div>
+                                <div class="w-60 sm:w-72 h-16 bg-gradient-to-r from-rose-400 via-pink-300 to-rose-400 rounded-t-xl rounded-b-lg shadow-lg flex items-center justify-around px-4">
+                                    <span>🍓</span><span>❤️</span><span>✨</span><span>❤️</span><span>🍓</span>
+                                </div>
+                                <div class="w-72 sm:w-80 h-3 bg-amber-200 rounded-full shadow"></div>
+                            </div>
+
+                            ${allBlown ? `
+                                <button onclick="resetCandles()" class="mt-2 text-xs text-rose-600 underline hover:text-rose-800">
+                                    Relight Candles ✨
+                                </button>
+                            ` : ''}
+                        </div>
+                    `;
+                    break;
+
+                case 11:
+                    container.innerHTML = `
+                        <div class="flex flex-col items-center text-center">
+                            <span class="text-xs uppercase tracking-widest text-rose-500 font-semibold mb-1">Gallery IV • Photos #39 – #50 (Final 12 Memories)</span>
+                            <h2 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-rose-900 mb-1">Forever & Always (All 50 Memories!) 💖</h2>
+                            <p class="text-xs text-rose-600 mb-4">Tap any photo or start full-screen slideshow mode ✨</p>
+                            
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 w-full mb-3">
+                                ${Array.from({ length: 12 }, (_, idx) => buildPhotoCardHTML(39 + idx, true)).join('')}
+                            </div>
+
+                            <button onclick="openLightbox(1)"
+                                class="px-5 py-2 rounded-full bg-rose-100 hover:bg-rose-200 text-rose-800 text-xs font-semibold border border-rose-300 transition">
+                                <i class="fa-solid fa-expand mr-1.5"></i> Browse All 50 Photos Full-Screen
+                            </button>
+                        </div>
+                    `;
+                    break;
+
+                case 12:
+                    const starCompliments = [
+                        "You shine brighter than every star in the night sky ✨",
+                        "My lucky star that guided me to true happiness 💫",
+                        "Every constellation spells out how much I adore you 🌟",
+                        "You are the moon & stars of my universe 🌙",
+                        "Forever grateful the universe brought us together ❤️"
+                    ];
+                    container.innerHTML = `
+                        <div class="flex flex-col items-center text-center">
+                            <span class="text-xs uppercase tracking-widest text-rose-500 font-semibold mb-1">Starry Night</span>
+                            <h2 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-rose-900 mb-1">A Constellation of You ✨</h2>
+                            <p class="text-xs sm:text-sm text-rose-700 mb-4">Tap the glowing stars in the night sky to connect our heart!</p>
+                            
+                            <div class="relative w-full max-w-md h-56 rounded-2xl bg-gradient-to-b from-[#1e1b4b] via-[#311042] to-[#4c0519] shadow-xl overflow-hidden border-2 border-amber-300/60">
+                                <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                    <polygon points="50,32 30,22 20,45 50,80 80,45 70,22" 
+                                        fill="${appState.connectedStars.length >= 5 ? 'rgba(244, 63, 94, 0.25)' : 'none'}" 
+                                        stroke="rgba(253, 224, 71, 0.55)" stroke-width="0.8" stroke-dasharray="2,2" />
+                                </svg>
+
+                                ${[
+                                    { top: '22%', left: '30%' },
+                                    { top: '45%', left: '20%' },
+                                    { top: '78%', left: '50%' },
+                                    { top: '45%', left: '80%' },
+                                    { top: '22%', left: '70%' }
+                                ].map((pos, idx) => {
+                                    const active = appState.connectedStars.includes(idx);
+                                    return `
+                                        <button onclick="clickStar(${idx})" style="top:${pos.top}; left:${pos.left};"
+                                            class="absolute -translate-x-1/2 -translate-y-1/2 w-9 h-9 rounded-full flex items-center justify-center transition transform hover:scale-125 ${
+                                                active ? 'text-yellow-300 scale-125 drop-shadow-[0_0_10px_#fde047]' : 'text-white/70 animate-pulse'
+                                            }">
+                                            <i class="fa-solid fa-star text-lg"></i>
+                                        </button>
+                                    `;
+                                }).join('')}
+
+                                <div class="absolute bottom-3 inset-x-3 bg-black/40 backdrop-blur-sm rounded-xl px-3 py-2 text-amber-200 text-xs font-medium">
+                                    ${appState.connectedStars.length > 0 
+                                        ? starCompliments[(appState.connectedStars[appState.connectedStars.length - 1]) % starCompliments.length]
+                                        : 'Tap any star above to reveal a message ✨'}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    break;
+
+                case 13:
+                    const coupons = [
+                        { title: "Unlimited Tight Hugs", desc: "Valid anytime, anywhere 🤗" },
+                        { title: "Candlelight Dinner Date", desc: "Your favorite food, my treat 🕯️" },
+                        { title: "Movie Night — Your Pick", desc: "Cozy blankets & snacks 🎬" },
+                        { title: "Midnight Dessert Run", desc: "Ice cream or waffles anytime 🍨" }
+                    ];
+                    container.innerHTML = `
+                        <div class="flex flex-col items-center text-center">
+                            <span class="text-xs uppercase tracking-widest text-rose-500 font-semibold mb-1">Gifts & Future Dreams</span>
+                            <h2 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-rose-900 mb-3">Love Coupons & Our Bucket List 🎟️❤️</h2>
+                            
+                            <!-- 4 Redeemable Coupons -->
+                            <div class="grid grid-cols-2 gap-2.5 w-full max-w-2xl mb-4">
+                                ${coupons.map((c, idx) => {
+                                    const claimed = appState.redeemedCoupons[idx];
+                                    return `
+                                        <div onclick="redeemCoupon(${idx})"
+                                            class="coupon-card cursor-pointer rounded-xl p-3 text-left shadow-sm hover:shadow-md transition">
+                                            <div class="flex items-center justify-between">
+                                                <span class="text-[9px] font-bold uppercase tracking-widest text-rose-500">VIP #0${idx + 1}</span>
+                                                <span class="text-xs">💝</span>
+                                            </div>
+                                            <h3 class="font-serif-luxury font-bold text-rose-950 text-xs sm:text-sm">${c.title}</h3>
+                                            <p class="text-[11px] text-rose-800/80">${c.desc}</p>
+                                            ${claimed ? `
+                                                <span class="mt-1 inline-block px-2 py-0.5 rounded-full bg-rose-600 text-white text-[9px] font-bold">
+                                                    REDEEMED ❤️
+                                                </span>
+                                            ` : `
+                                                <span class="mt-1 inline-block text-[10px] font-semibold text-rose-600">Tap to Redeem →</span>
+                                            `}
+                                        </div>
+                                    `;
+                                }).join('')}
+                            </div>
+
+                            <!-- Bucket List Checklist -->
+                            <div class="space-y-1.5 w-full max-w-2xl text-left">
+                                ${appState.bucketList.map((item, idx) => `
+                                    <div onclick="toggleBucketItem(${idx})"
+                                        class="cursor-pointer px-3 py-2 rounded-xl border transition flex items-center gap-2.5 ${
+                                            item.checked 
+                                                ? 'bg-rose-100/80 border-rose-300 text-rose-950' 
+                                                : 'bg-white/90 border-rose-200 text-rose-800 hover:bg-rose-50'
+                                        }">
+                                        <div class="w-5 h-5 rounded flex items-center justify-center border flex-shrink-0 ${
+                                            item.checked ? 'bg-rose-500 border-rose-500 text-white' : 'border-rose-300'
+                                        }">
+                                            ${item.checked ? '<i class="fa-solid fa-check text-[10px]"></i>' : ''}
+                                        </div>
+                                        <span class="text-xs font-medium ${item.checked ? 'line-through decoration-rose-400' : ''}">
+                                            ${item.text}
+                                        </span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                    break;
+
+                case 14:
+                    container.innerHTML = `
+                        <div class="flex flex-col items-center text-center max-w-xl mx-auto">
+                            <span class="text-xs uppercase tracking-widest text-rose-500 font-semibold mb-1">Birthday Blessings & Voice Dedication</span>
+                            <h2 class="font-serif-luxury text-2xl sm:text-3xl font-bold text-rose-900 mb-3">My Prayers & Wishes For You 🏮</h2>
+                            
+                            <div class="bg-gradient-to-b from-amber-50 to-rose-50 border border-amber-200 rounded-2xl p-4 sm:p-5 shadow-inner space-y-2.5 text-left w-full">
+                                <p class="text-xs sm:text-sm text-rose-950 leading-relaxed flex items-start gap-2.5">
+                                    <span class="text-base">🌸</span>
+                                    <span>May this new year of your life bring endless peace, radiant health, and every success your heart dreams of.</span>
+                                </p>
+                                <p class="text-xs sm:text-sm text-rose-950 leading-relaxed flex items-start gap-2.5">
+                                    <span class="text-base">☀️</span>
+                                    <span>May you never lose that magical sparkle in your eyes or the warmth of your beautiful smile.</span>
+                                </p>
+                                <p class="text-xs sm:text-sm text-rose-950 leading-relaxed flex items-start gap-2.5">
+                                    <span class="text-base">💑</span>
+                                    <span>And through every season, every high and low, I promise to stand beside you, cherish you, and love you more each day.</span>
+                                </p>
+                            </div>
+
+                            <!-- Replay Personal Voice Note Before the Final Question -->
+                            ${buildVoiceNoteCardHTML()}
+
+                            <p class="font-script text-2xl text-rose-600 mt-4">
+                                Turn to the final page for one last question... ❤️
+                            </p>
+                        </div>
+                    `;
+                    break;
+
+                case 15:
+                    if (appState.saidYes) {
+                        container.innerHTML = `
+                            <div class="flex flex-col items-center text-center py-4 animate-fadeIn">
+                                <div class="text-5xl sm:text-6xl mb-3 animate-bounce">🥳💖🥂</div>
+                                <h2 class="font-script text-4xl sm:text-6xl text-rose-600 font-bold mb-3">
+                                    YAY!! Best Birthday Ever!
+                                </h2>
+                                <p class="font-serif-luxury text-base sm:text-xl text-rose-950 max-w-md mb-4 leading-relaxed">
+                                    I knew you'd say YES, my <span class="text-rose-600 font-bold">Shonaaa Betuuuuuuu</span>! ❤️<br>
+                                    Get ready for the sweetest, most unforgettable birthday celebration together!
+                                </p>
+                                <div class="bg-rose-100 border-2 border-rose-300 rounded-2xl px-5 py-3.5 max-w-sm shadow-sm mb-4">
+                                    <p class="text-xs sm:text-sm font-semibold text-rose-800">
+                                        📸 Take a screenshot of this page right now and send it to me so we can start celebrating! 💕
+                                    </p>
+                                </div>
+                                <button onclick="launchFireworksBurst()" class="px-6 py-2.5 rounded-full bg-rose-500 text-white text-xs sm:text-sm font-semibold shadow-lg hover:bg-rose-600 transition">
+                                    More Fireworks! 🎆
+                                </button>
+                            </div>
+                        `;
+                    } else {
+                        container.innerHTML = `
+                            <div id="proposal-arena" class="relative w-full h-full min-h-[390px] sm:min-h-[420px] flex flex-col items-center justify-center text-center px-2 overflow-hidden">
+                                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-rose-100 text-rose-700 text-xs font-bold uppercase tracking-wider mb-3">
+                                    ❤️ The Final Page ❤️
+                                </div>
+
+                                <h2 class="font-serif-luxury text-2xl sm:text-4xl font-bold text-rose-950 mb-3 leading-snug max-w-lg">
+                                    Will you come to celebrate your birthday with me? 🎂🥂❤️
+                                </h2>
+
+                                <p id="plea-subtitle" class="font-script text-2xl sm:text-3xl text-rose-600 mb-8 min-h-[36px]">
+                                    Please say yes, my Shonaaa Betuuuuuuu... 🥺💕
+                                </p>
+
+                                <div class="flex items-center justify-center gap-6 sm:gap-10 w-full relative z-20">
+                                    <button id="yes-btn" onclick="handleYesClick()"
+                                        style="transform: scale(${1 + Math.min(appState.noDodges * 0.06, 0.45)})"
+                                        class="px-7 sm:px-9 py-3.5 sm:py-4 rounded-full bg-gradient-to-r from-rose-500 via-pink-600 to-rose-600 text-white font-bold text-base sm:text-lg shadow-xl shadow-rose-500/40 hover:brightness-110 transition-transform duration-200 cursor-pointer">
+                                        Yes, I'd Love To! 💖
+                                    </button>
+
+                                    <div id="no-placeholder" class="w-24 h-12"></div>
+                                </div>
+
+                                <!-- Runaway "No" Button (Impossible to click!) -->
+                                <button id="no-btn"
+                                    onmouseover="dodgeNoButton(event)"
+                                    ontouchstart="dodgeNoButton(event)"
+                                    onclick="dodgeNoButton(event)"
+                                    style="top: 63%; left: 62%;"
+                                    class="absolute z-30 px-5 py-2.5 rounded-full bg-white text-rose-700 border-2 border-rose-300 font-semibold text-sm shadow-md transition-all duration-200 ease-out select-none">
+                                    No 😢
+                                </button>
+                            </div>
+                        `;
+                        setTimeout(positionInitialNoButton, 20);
+                    }
+                    break;
+            }
+        }
+
+        /* ==========================================================================
+           LIGHTBOX & MEDIA STUDIO HANDLERS (50 PHOTOS, SONG, VOICE NOTE)
+           ========================================================================== */
+        function openLightbox(photoNum) {
+            currentLightboxPhoto = photoNum;
+            updateLightboxContent();
+            const overlay = document.getElementById('lightbox-overlay');
+            overlay.classList.remove('hidden');
+            overlay.classList.add('flex');
+        }
+
+        function updateLightboxContent() {
+            const imgEl = document.getElementById('lightbox-img');
+            const fallbackEl = document.getElementById('lightbox-fallback');
+            const counterEl = document.getElementById('lightbox-counter');
+            const captionEl = document.getElementById('lightbox-caption');
+            const fallbackTitle = document.getElementById('lightbox-fallback-title');
+
+            counterEl.textContent = `Memory #${currentLightboxPhoto} of ${ALBUM_CONFIG.totalPhotos}`;
+            captionEl.textContent = PHOTO_CAPTIONS[currentLightboxPhoto - 1] || `Memory #${currentLightboxPhoto}`;
+            fallbackTitle.textContent = `Memory #${currentLightboxPhoto}`;
+
+            if (!photoFailedLoad[currentLightboxPhoto]) {
+                imgEl.src = photoSources[currentLightboxPhoto];
+                imgEl.classList.remove('hidden');
+                fallbackEl.classList.add('hidden');
+            } else {
+                imgEl.classList.add('hidden');
+                fallbackEl.classList.remove('hidden');
+            }
+        }
+
+        function stepLightbox(delta) {
+            currentLightboxPhoto += delta;
+            if (currentLightboxPhoto > ALBUM_CONFIG.totalPhotos) currentLightboxPhoto = 1;
+            if (currentLightboxPhoto < 1) currentLightboxPhoto = ALBUM_CONFIG.totalPhotos;
+            updateLightboxContent();
+        }
+
+        function closeLightbox(e) {
+            if (e.target.id === 'lightbox-overlay') forceCloseLightbox();
+        }
+        function forceCloseLightbox() {
+            const overlay = document.getElementById('lightbox-overlay');
+            overlay.classList.add('hidden');
+            overlay.classList.remove('flex');
+        }
+
+        function uploadSinglePhotoFromLightbox(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            photoSources[currentLightboxPhoto] = URL.createObjectURL(file);
+            photoFailedLoad[currentLightboxPhoto] = false;
+            updateLightboxContent();
+            renderPage(currentPage);
+        }
+
+        /* Studio Modal Controls */
+        function openStudioModal() {
+            const overlay = document.getElementById('studio-overlay');
+            overlay.classList.remove('hidden');
+            overlay.classList.add('flex');
+        }
+        function closeStudioModal(e) {
+            if (e.target.id === 'studio-overlay') forceCloseStudio();
+        }
+        function forceCloseStudio() {
+            const overlay = document.getElementById('studio-overlay');
+            overlay.classList.add('hidden');
+            overlay.classList.remove('flex');
+        }
+
+        function handleBatchPhotos(event) {
+            const files = Array.from(event.target.files).slice(0, ALBUM_CONFIG.totalPhotos);
+            if (!files.length) return;
+            files.forEach((file, idx) => {
+                const slot = idx + 1;
+                photoSources[slot] = URL.createObjectURL(file);
+                photoFailedLoad[slot] = false;
+            });
+            const countLabel = document.getElementById('studio-photo-count');
+            if (countLabel) {
+                countLabel.textContent = `Loaded ${files.length} photo(s) into slots #1–#${files.length}!`;
+            }
+            renderPage(currentPage);
+        }
+
+        function handleSongUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const url = URL.createObjectURL(file);
+            appState.songSrc = url;
+            appState.songTitle = file.name.replace(/\.[^/.]+$/, "");
+            appState.usingFallbackSynth = false;
+            stopFallbackSynth();
+            bgAudio.src = url;
+            appState.songPlaying = true;
+            bgAudio.play();
+            updateSongUI();
+        }
+
+        function handleVoiceNoteUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const url = URL.createObjectURL(file);
+            appState.voiceSrc = url;
+            voiceAudio.src = url;
+            renderPage(currentPage);
+            openMessageModal({
+                emoji: "🎙️",
+                title: "Voice Note Loaded!",
+                msg: "Your personal voice note is ready! Tap the play button on Page 2 or Page 14 to listen."
+            });
+        }
+
+        /* ==========================================================================
+           NAVIGATION & INTERACTIVE HANDLERS
+           ========================================================================== */
+        function startAlbum() {
+            if (!appState.songPlaying) {
+                toggleBackgroundSong();
+            }
+            nextPage();
+        }
+
+        function nextPage() {
+            if (currentPage < TOTAL_PAGES) {
+                transitionDirection = 'next';
+                currentPage++;
+                renderPage(currentPage);
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                transitionDirection = 'prev';
+                currentPage--;
+                renderPage(currentPage);
+            }
+        }
+
+        // Keyboard Arrow Navigation (Supports both Lightbox & Book Pages)
+        document.addEventListener('keydown', (e) => {
+            const lbOpen = !document.getElementById('lightbox-overlay').classList.contains('hidden');
+            if (lbOpen) {
+                if (e.key === 'ArrowRight') stepLightbox(1);
+                if (e.key === 'ArrowLeft') stepLightbox(-1);
+                if (e.key === 'Escape') forceCloseLightbox();
+                return;
+            }
+            if (e.key === 'ArrowRight') nextPage();
+            if (e.key === 'ArrowLeft') prevPage();
+        });
+
+        /* Page 2: Love Letter Typewriter */
+        function openLoveEnvelope() {
+            appState.envelopeOpened = true;
+            renderPage(2);
+        }
+
+        function runLetterTypewriter() {
+            const el = document.getElementById('love-letter-text');
+            if (!el) return;
+            const fullText = `Happy Birthday to the most incredible, gorgeous, and precious soul in my life!
+
+Every single day with you feels like a gift I never want to stop unwrapping. Your laughter is my favorite melody, your happiness is my greatest wish, and having you by my side is the best thing that has ever happened to me.
+
+Today is all about celebrating YOU—your kindness, your beauty, and the magic you bring into my world.`;
+
+            if (appState.letterTyped) {
+                el.textContent = fullText;
+                return;
+            }
+
+            let i = 0;
+            el.textContent = '';
+            const timer = setInterval(() => {
+                if (!document.getElementById('love-letter-text')) {
+                    clearInterval(timer);
+                    return;
+                }
+                el.textContent += fullText.charAt(i);
+                i++;
+                if (i >= fullText.length) {
+                    clearInterval(timer);
+                    appState.letterTyped = true;
+                }
+            }, 22);
+        }
+
+        /* Pages 4, 6, 9: Instant Photo Upload Handler */
+        function handlePhotoUpload(event, key) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                appState.photos[key] = e.target.result;
+                renderPage(currentPage);
+            };
+            reader.readAsDataURL(file);
+        }
+
+        /* Page 5: Reveal Reasons */
+        function revealReason(idx) {
+            appState.revealedReasons[idx] = true;
+            renderPage(5);
+        }
+
+        /* Page 7: Scratch Card Canvas */
+        function initScratchCard() {
+            const canvas = document.getElementById('scratch-canvas');
+            if (!canvas) return;
+            const rect = canvas.getBoundingClientRect();
+            canvas.width = rect.width;
+            canvas.height = rect.height;
+            const ctx = canvas.getContext('2d');
+
+            // Metallic Rose-Gold Scratch Coating
+            const grad = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            grad.addColorStop(0, '#f43f5e');
+            grad.addColorStop(0.5, '#fbbf24');
+            grad.addColorStop(1, '#e11d48');
+            ctx.fillStyle = grad;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Scratch prompt text on coating
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 16px Poppins, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('✨ Scratch Here With Your Finger ✨', canvas.width / 2, canvas.height / 2 + 5);
+
+            let isDrawing = false;
+
+            function scratch(clientX, clientY) {
+                const r = canvas.getBoundingClientRect();
+                const x = clientX - r.left;
+                const y = clientY - r.top;
+                ctx.globalCompositeOperation = 'destination-out';
+                ctx.beginPath();
+                ctx.arc(x, y, 22, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            canvas.addEventListener('mousedown', (e) => { isDrawing = true; scratch(e.clientX, e.clientY); });
+            canvas.addEventListener('mousemove', (e) => { if (isDrawing) scratch(e.clientX, e.clientY); });
+            window.addEventListener('mouseup', () => { isDrawing = false; });
+
+            canvas.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+                isDrawing = true;
+                const t = e.touches[0];
+                scratch(t.clientX, t.clientY);
+            }, { passive: false });
+
+            canvas.addEventListener('touchmove', (e) => {
+                e.preventDefault();
+                if (!isDrawing) return;
+                const t = e.touches[0];
+                scratch(t.clientX, t.clientY);
+            }, { passive: false });
+
+            canvas.addEventListener('touchend', () => { isDrawing = false; });
+        }
+
+        /* Page 8: Modal Box */
+        function openMessageModal(env) {
+            document.getElementById('modal-emoji').textContent = env.emoji;
+            document.getElementById('modal-title').textContent = env.title;
+            document.getElementById('modal-body').textContent = env.msg;
+            const overlay = document.getElementById('modal-overlay');
+            overlay.classList.remove('hidden');
+            overlay.classList.add('flex');
+        }
+        function closeModal(e) {
+            if (e.target.id === 'modal-overlay') forceCloseModal();
+        }
+        function forceCloseModal() {
+            const overlay = document.getElementById('modal-overlay');
+            overlay.classList.add('hidden');
+            overlay.classList.remove('flex');
+        }
+
+        /* Page 10: Birthday Candles */
+        function blowCandle(idx) {
+            if (appState.candlesBlown[idx]) return;
+            appState.candlesBlown[idx] = true;
+            renderPage(10);
+            if (appState.candlesBlown.every(Boolean)) {
+                launchFireworksBurst();
+            }
+        }
+        function resetCandles() {
+            appState.candlesBlown = [false, false, false, false, false];
+            renderPage(10);
+        }
+
+        /* Page 11: Bucket List */
+        function toggleBucketItem(idx) {
+            appState.bucketList[idx].checked = !appState.bucketList[idx].checked;
+            renderPage(11);
+        }
+
+        /* Page 12: Star Constellation */
+        function clickStar(idx) {
+            if (!appState.connectedStars.includes(idx)) {
+                appState.connectedStars.push(idx);
+            } else {
+                // Move to end so compliment updates
+                appState.connectedStars = appState.connectedStars.filter(i => i !== idx);
+                appState.connectedStars.push(idx);
+            }
+            renderPage(12);
+        }
+
+        /* Page 13: Love Coupons */
+        function redeemCoupon(idx) {
+            appState.redeemedCoupons[idx] = true;
+            renderPage(13);
+        }
+
+        /* ==========================================================================
+           PAGE 15: UNCLICKABLE RUNAWAY "NO" BUTTON & CELEBRATION LOGIC
+           ========================================================================== */
+        const funnyNoTexts = [
+            "Are you sure? 🥺",
+            "Nice try! 😜",
+            "Wrong button! 💕",
+            "Catch me if you can!",
+            "Error 404: No not found!",
+            "My heart says click Yes ❤️",
+            "Too slow, Shonaaa! 😂",
+            "Not allowed today! 🎂",
+            "Click the pink one! 💖"
+        ];
+
+        function positionInitialNoButton() {
+            const placeholder = document.getElementById('no-placeholder');
+            const arena = document.getElementById('proposal-arena');
+            const noBtn = document.getElementById('no-btn');
+            if (!placeholder || !arena || !noBtn) return;
+
+            const pRect = placeholder.getBoundingClientRect();
+            const aRect = arena.getBoundingClientRect();
+            noBtn.style.left = `${pRect.left - aRect.left}px`;
+            noBtn.style.top = `${pRect.top - aRect.top}px`;
+        }
+
+        function dodgeNoButton(event) {
+            if (event) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            const arena = document.getElementById('proposal-arena');
+            const noBtn = document.getElementById('no-btn');
+            const yesBtn = document.getElementById('yes-btn');
+            const plea = document.getElementById('plea-subtitle');
+            if (!arena || !noBtn) return;
+
+            appState.noDodges++;
+
+            // Update playful text on the runaway button
+            noBtn.textContent = funnyNoTexts[appState.noDodges % funnyNoTexts.length];
+
+            // Make Yes button grow slightly larger & more irresistible
+            if (yesBtn) {
+                const newScale = 1 + Math.min(appState.noDodges * 0.06, 0.45);
+                yesBtn.style.transform = `scale(${newScale})`;
+            }
+
+            if (plea && appState.noDodges === 3) {
+                plea.textContent = "Haha! That button is broken, only YES works! 😉❤️";
+            }
+
+            // Calculate safe random coordinates inside the arena bounds
+            const arenaW = arena.clientWidth;
+            const arenaH = arena.clientHeight;
+            const btnW = noBtn.offsetWidth || 120;
+            const btnH = noBtn.offsetHeight || 44;
+
+            const padding = 14;
+            const maxX = Math.max(padding, arenaW - btnW - padding);
+            const maxY = Math.max(padding, arenaH - btnH - padding);
+
+            const randomX = Math.floor(Math.random() * (maxX - padding + 1)) + padding;
+            const randomY = Math.floor(Math.random() * (maxY - padding + 1)) + padding;
+
+            noBtn.style.left = `${randomX}px`;
+            noBtn.style.top = `${randomY}px`;
+        }
+
+        function handleYesClick() {
+            appState.saidYes = true;
+            renderPage(15);
+            launchFireworksBurst();
+            setTimeout(launchFireworksBurst, 700);
+            setTimeout(launchFireworksBurst, 1400);
+        }
+
+        /* ==========================================================================
+           AMBIENT FLOATING PETALS & CELEBRATION FIREWORKS CANVAS ENGINES
+           ========================================================================== */
+        const ambientCanvas = document.getElementById('ambient-canvas');
+        const ambientCtx = ambientCanvas.getContext('2d');
+        let petals = [];
+
+        function resizeCanvases() {
+            ambientCanvas.width = window.innerWidth;
+            ambientCanvas.height = window.innerHeight;
+            fwCanvas.width = window.innerWidth;
+            fwCanvas.height = window.innerHeight;
+        }
+
+        function initPetals() {
+            petals = [];
+            const count = window.innerWidth < 600 ? 18 : 30;
+            for (let i = 0; i < count; i++) {
+                petals.push({
+                    x: Math.random() * window.innerWidth,
+                    y: Math.random() * window.innerHeight,
+                    size: Math.random() * 8 + 6,
+                    speedY: Math.random() * 0.8 + 0.35,
+                    speedX: Math.random() * 0.6 - 0.3,
+                    angle: Math.random() * Math.PI * 2,
+                    spin: (Math.random() - 0.5) * 0.03,
+                    isHeart: Math.random() > 0.55
+                });
+            }
+        }
+
+        function animateAmbient() {
+            ambientCtx.clearRect(0, 0, ambientCanvas.width, ambientCanvas.height);
+            petals.forEach(p => {
+                p.y += p.speedY;
+                p.x += p.speedX + Math.sin(p.angle) * 0.3;
+                p.angle += p.spin;
+
+                if (p.y > ambientCanvas.height + 20) {
+                    p.y = -20;
+                    p.x = Math.random() * ambientCanvas.width;
+                }
+
+                ambientCtx.save();
+                ambientCtx.translate(p.x, p.y);
+                ambientCtx.rotate(p.angle);
+                ambientCtx.fillStyle = p.isHeart ? 'rgba(225, 29, 72, 0.28)' : 'rgba(255, 228, 230, 0.55)';
+
+                if (p.isHeart) {
+                    ambientCtx.font = `${p.size + 4}px serif`;
+                    ambientCtx.fillText('❤', -p.size / 2, p.size / 2);
+                } else {
+                    ambientCtx.beginPath();
+                    ambientCtx.ellipse(0, 0, p.size, p.size * 0.55, 0, 0, Math.PI * 2);
+                    ambientCtx.fill();
+                }
+                ambientCtx.restore();
+            });
+            requestAnimationFrame(animateAmbient);
+        }
+
+        // Fireworks Particle Engine
+        const fwCanvas = document.getElementById('fireworks-canvas');
+        const fwCtx = fwCanvas.getContext('2d');
+        let particles = [];
+
+        function launchFireworksBurst() {
+            const colors = ['#f43f5e', '#fbbf24', '#ec4899', '#ffffff', '#fb7185', '#f59e0b'];
+            for (let b = 0; b < 4; b++) {
+                const cx = (window.innerWidth * 0.2) + Math.random() * (window.innerWidth * 0.6);
+                const cy = (window.innerHeight * 0.15) + Math.random() * (window.innerHeight * 0.45);
+                for (let i = 0; i < 42; i++) {
+                    const angle = (Math.PI * 2 * i) / 42;
+                    const speed = Math.random() * 5 + 2;
+                    particles.push({
+                        x: cx,
+                        y: cy,
+                        vx: Math.cos(angle) * speed,
+                        vy: Math.sin(angle) * speed,
+                        alpha: 1,
+                        color: colors[Math.floor(Math.random() * colors.length)],
+                        size: Math.random() * 4 + 2
+                    });
+                }
+            }
+        }
+
+        function animateFireworks() {
+            fwCtx.clearRect(0, 0, fwCanvas.width, fwCanvas.height);
+            for (let i = particles.length - 1; i >= 0; i--) {
+                const pt = particles[i];
+                pt.x += pt.vx;
+                pt.y += pt.vy;
+                pt.vy += 0.08; // gentle gravity
+                pt.alpha -= 0.014;
+
+                if (pt.alpha <= 0) {
+                    particles.splice(i, 1);
+                    continue;
+                }
+
+                fwCtx.save();
+                fwCtx.globalAlpha = pt.alpha;
+                fwCtx.fillStyle = pt.color;
+                fwCtx.beginPath();
+                fwCtx.arc(pt.x, pt.y, pt.size, 0, Math.PI * 2);
+                fwCtx.fill();
+                fwCtx.restore();
+            }
+            requestAnimationFrame(animateFireworks);
+        }
+
+        /* ==========================================================================
+           INITIALIZATION ON WINDOW LOAD
+           ========================================================================== */
+        window.addEventListener('resize', () => {
+            resizeCanvases();
+            if (currentPage === 15 && !appState.saidYes && appState.noDodges === 0) {
+                positionInitialNoButton();
+            }
+        });
+
+        window.onload = function() {
+            resizeCanvases();
+            initPetals();
+            animateAmbient();
+            animateFireworks();
+            renderPage(1);
+        };
+    </script>
+</body>
+</html>
